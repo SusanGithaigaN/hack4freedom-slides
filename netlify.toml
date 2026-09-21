@@ -6,11 +6,22 @@ command = "npm run build"
 NODE_VERSION = "24"
 
 [[redirects]]
+from = "https://hack4freedom.netlify.app/*"
+to = "https://boss.susangithaiga.com/:splat"
+status = 302
+force = true
+
+[[redirects]]
 from = "/.well-known/*"
 to = "/.well-known/:splat"
 status = 200
 
 [[redirects]]
-from = "/*"
-to = "/index.html"
+from = "/"
+to = "/hack4freedom/"
+status = 302
+
+[[redirects]]
+from = "/hack4freedom/*"
+to = "/hack4freedom/index.html"
 status = 200

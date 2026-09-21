@@ -1,0 +1,9 @@
+--- a/first-contribution.md
++++ b/first-contribution.md
+@@ -1 +1,5 @@
+-Choose a Bitcoin project and contribute.
++Open Bitcoin Core's contribution page:
++https://bitcoincore.org/en/contribute/
++Choose documentation, testing, review or code.
++Read the linked contribution guidelines.
++Find one task and check for existing discussion.

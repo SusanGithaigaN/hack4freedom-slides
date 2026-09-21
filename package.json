@@ -3,9 +3,11 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "slidev build",
-    "dev": "slidev --open",
-    "export": "slidev export"
+    "build": "slidev build hack4freedom.md --base /hack4freedom/ --out dist/hack4freedom",
+    "preview": "vite preview --base /hack4freedom/ --outDir dist/hack4freedom",
+    "dev": "slidev hack4freedom.md --open",
+    "export": "slidev export hack4freedom.md",
+    "dev:starter": "slidev slides.md"
   },
   "dependencies": {
     "@slidev/cli": "^53.0.0",
