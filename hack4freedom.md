@@ -410,22 +410,39 @@ class: h4f
 
 <div class="eyebrow">05 / Find work · Maintenance</div>
 
-# Updating outdated code
+# Small fixes: reduce dependency risk
 
-<p class="lead">My merged PR replaced a dependency used for two fixed CRC calculations.</p>
+<p class="lead">Help Bitcoin projects assess the third-party code they rely on.</p>
 
-<dl class="pr-details">
-<dt>Opportunity</dt><dd>A dependency audit identified <code>crc_all</code> for review.</dd>
-<dt>Change</dt><dd>Replace it with CRC-5-USB and CRC-16-CCITT-FALSE implementations.</dd>
-<dt>Scope</dt><dd>Keep the public functions and their callers unchanged.</dd>
-<dt>Evidence</dt><dd>Existing test vectors plus comparisons against the old implementation.</dd>
-</dl>
-<div class="callout">For outdated or unnecessary code, agree on the need and scope first. Show how you checked the behaviour.</div>
-<p class="caption"><a href="https://github.com/256foundation/mujina/pull/103" target="_blank" rel="noopener noreferrer">256foundation/mujina · PR #103</a> · Merged 31 August 2026</p>
+<div class="split">
+<div>
+<h2>Look for a focused task</h2>
+<ul class="small">
+<li>Unnecessary direct or indirect dependencies.</li>
+<li>Deprecated or unmaintained packages.</li>
+<li>Versions with known security vulnerabilities.</li>
+<li>Publishers or release origins you cannot verify.</li>
+</ul>
+</div>
+<div>
+<h2>Turn the finding into a PR</h2>
+<ol class="small">
+<li>Verify the source and check security advisories.</li>
+<li>Agree on an update, removal or replacement.</li>
+<li>Keep the change focused and verify the behaviour.</li>
+<li>Run the project’s checks. Document the results.</li>
+</ol>
+</div>
+</div>
+<div class="callout"><strong>Small maintenance fixes can help reduce supply-chain risk.</strong><br><a href="https://github.com/256foundation/mujina/pull/103" target="_blank" rel="noopener noreferrer">Example</a></div>
+<p class="caption">Assess the tradeoffs: replacement code also needs review, tests and maintenance.</p>
 
 <!--
-1.5 minutes. Open my PR to explain a concrete maintenance contribution. Its title is “chore(deps): replace crc_all with inline CRC implementations”. The dependency audit is discussion #8 and issue #29. The PR describes crc_all as a niche, single-maintainer crate whose generic abstraction was unnecessary for these two fixed configurations. Do not call it deprecated or claim the version was outdated. The public functions crc5, crc5_is_valid and crc16 and their protocol.rs call sites stayed unchanged. The PR reports nine CRC-5 vectors from esp-miner and one CRC-16 vector from a serial capture, plus local differential tests across all 256 one-byte and 65,536 two-byte inputs for both algorithms. These are the author's reported checks, not checks rerun for this presentation. GitHub confirms the PR merged on 31 August 2026. This example is about justified scope and verification, not a recommendation that beginners rewrite cryptographic or protocol code without understanding it.
-Source: https://github.com/256foundation/mujina/pull/103
+1.5 minutes. Address contributors to Bitcoin open-source projects generally. Dependency maintenance includes removing unused packages, migrating away from deprecated or unmaintained packages, updating versions affected by known advisories, and investigating package provenance. Include transitive dependencies, which arrive through other dependencies.
+Verify the relationship between the package, its source repository, publisher and release process. Use signatures or provenance attestations when available. Missing provenance is a reason to investigate, not proof of malicious code. An unfamiliar, pseudonymous or individual maintainer is not automatically untrustworthy. Deprecated does not necessarily mean vulnerable. Base claims on evidence and consult project maintainers before replacing dependencies.
+The goal is to reduce avoidable software supply-chain exposure, not promise immunity from attacks. No particular recent Bitcoin incident has been identified here, so do not attribute an attack to dependency problems without a verified source. Replacing established code with custom code can introduce bugs and maintenance costs.
+Mujina is only the example. PR #103 replaced crc_all with specific CRC implementations following its dependency audit. It was not presented as a fix for a known vulnerability. The issue's just checks command and potential reduction estimates are specific to Mujina, not instructions or statistics for all Bitcoin projects.
+Sources: https://best.openssf.org/Concise-Guide-for-Evaluating-Open-Source-Software.html and https://repos.openssf.org/ and https://github.com/256foundation/mujina/discussions/8 and https://github.com/256foundation/mujina/pull/103
 -->
 
 ---
@@ -511,6 +528,34 @@ Source for one project's policy requirements: https://github.com/bitcoin/bitcoin
 -->
 
 ---
+class: h4f ai-verification
+---
+
+<div class="eyebrow">06 / Review AI output</div>
+
+# AI output is a draft
+
+<div class="ai-review-layout">
+<div>
+<p class="lead"><strong>Vet every AI-generated code change and suggestion before using it.</strong></p>
+<ul>
+<li>Understand the code and check its assumptions.</li>
+<li>Verify claims and references against the project.</li>
+<li>Test expected behaviour and edge cases.</li>
+</ul>
+<div class="callout"><strong>A confident answer can still be wrong.</strong><br>You are responsible for what you submit.</div>
+</div>
+<div class="ai-demo">
+<img class="ai-demo-gif" src="./diagrams/dog-dance.gif" alt="Animated dog dancing, selected to illustrate AI mistakes" />
+</div>
+</div>
+
+<!--
+1 minute plus animation time. Treat AI-generated code and suggestions as proposals to inspect and test, not a finished solution. AI can invent facts, references or plausible-looking code. Explain what is wrong in the speaker-selected animation rather than using it to make a numerical claim about hallucination frequency. The local GIF plays automatically without sound. Follow the project's AI policy and obtain the normal code review.
+Animation supplied by the speaker: diagrams/dog-dance.gif
+-->
+
+---
 class: h4f assignment-examples
 ---
 
@@ -533,7 +578,9 @@ class: h4f assignment-examples
 </div>
 </div>
 </div>
-<p class="caption"><a href="https://github.com/bitcoin-dev-project/bitcoin-dev-project/issues/340#event-27090589023" target="_blank" rel="noopener noreferrer">Example</a></p>
+<p class="caption"><a href="https://github.com/bitcoin-dev-project/bitcoin-dev-project/issues/340#event-27090589023" target="_blank" rel="noopener noreferrer">Example 1</a></p>
+<p class="caption"><a href="https://github.com/bitcoin-dev-project/bitcoin-dev-project/issues/295#event-23932217266" target="_blank" rel="noopener noreferrer">Example 2</a></p>
+
 <div class="callout">Follow the project’s process for taking on work. Confirm availability and scope with a maintainer.
 </div>
 
