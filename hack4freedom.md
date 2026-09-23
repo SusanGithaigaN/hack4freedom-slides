@@ -10,13 +10,13 @@ fonts:
   sans: Segoe UI
   mono: DejaVu Sans Mono
   provider: none
-duration: 30min
+duration: 45min
 transition: fade
 drawings:
   persist: false
 ---
 
-<div class="cover-mark"><span class="bitcoin-mak" aria-label="Bitcoin"></span> Hack4Freedom</div>
+<!-- <div class="cover-mark"><span class="bitcoin-mark" aria-label="Bitcoin"></span> Hack4Freedom</div> -->
 <div class="cover-grid">
 <div>
 
@@ -36,7 +36,7 @@ drawings:
 </div>
 
 <!--
-1 minute. This talk follows my process: start with familiar skills, shortlist about three projects, learn how people work together, and then choose a useful task. No purchase of bitcoin is needed. Ask who has used GitHub but has not opened a PR yet. We will reserve five minutes to find a real opportunity.
+1 minute. This talk follows my process: start with familiar skills, shortlist about three projects, learn how people work together, and then choose a useful task. No purchase of bitcoin is needed. Ask who has used GitHub but has not opened a PR yet. We will reserve ten minutes to find a real opportunity.
 Visual attribution: IBM Carbon icons, Apache-2.0, https://github.com/carbon-design-system/carbon/tree/main/packages/icons
 All repository, issue and PR mockups in this deck are original teaching examples, not screenshots of live projects. Bitcoin mark is typeset text.
 -->
@@ -53,7 +53,6 @@ class: h4f
 <div>
 <p class="lead">Which language or technology<br>can you work with today?</p>
 <div class="tags"><span class="tag orange">Python</span><span class="tag orange">JavaScript / TypeScript</span><span class="tag orange">Ruby on Rails</span><span class="tag orange">Rust</span><span class="tag orange">C++</span><span class="tag orange">C#</span></div>
-<br/><br/>
 <p class="small muted">These are just examples, not prerequisites. Writing, testing and design are useful skills too.</p>
 </div>
 <div class="card orange" v-click>
@@ -110,9 +109,9 @@ class: h4f
 <table class="comparison">
 <thead><tr><th>Look at</th><th>Ask yourself</th></tr></thead>
 <tbody>
+<tr class="activity-priority"><td><strong>Activity</strong></td><td>Are issues answered and PRs reviewed?</td></tr>
 <tr><td>Language &amp; stack</td><td>Can I understand and run a small part?</td></tr>
 <tr><td>Purpose</td><td>Do I care about the problem it solves?</td></tr>
-<tr><td>Activity</td><td>Are issues answered and PRs reviewed?</td></tr>
 <tr><td>Documentation</td><td>Can I follow the setup and contribution guide?</td></tr>
 <tr><td>Community</td><td>Where can I ask a useful question?</td></tr>
 <tr><td>First tasks</td><td>Is there something small I can verify?</td></tr>
@@ -139,7 +138,7 @@ class: h4f
 <div class="file-row active"><carbon:document-tasks /><code>CONTRIBUTING.md</code></div>
 <div class="file-row"><carbon:document /><code>LICENSE</code><span>Reuse terms</span></div>
 <div class="file-row"><carbon:folder /><code>src/</code><span>Implementation</span></div>
-<div class="file-row"><carbon:folder /><code>tests/</code><span>Expected behavior</span></div>
+<div class="file-row"><carbon:folder /><code>tests/</code><span>Expected behaviour</span></div>
 <div class="file-row"><carbon:folder /><code>docs/</code><span>Guides</span></div>
 </div>
 <div class="mock" v-click>
@@ -163,6 +162,43 @@ Source: https://opensource.guide/how-to-contribute/
 class: h4f
 ---
 
+<div class="eyebrow">03 / Why the guidelines matter</div>
+
+# 
+
+<div class="split guideline-joke">
+<div>
+<p class="lead"><strong>Me:</strong> “I’ll read CONTRIBUTING.md after I open the PR.”</p>
+</div>
+<img class="guideline-meme" src="./diagrams/after.gif" alt="Reaction meme: a man peeks around a doorway with a knowing smile." />
+</div>
+
+
+---
+class: h4f
+---
+
+<div class="eyebrow">03 / Why the guidelines matter</div>
+
+# 
+
+<div class="split guideline-joke">
+<div>
+<p class="lead"><strong>Maintainer:</strong>Closes PR</p>
+<div class="callou"><a href="https://github.com/fedimint/fedimint-sdk/pull/249#issuecomment-4088409313" target="_blank" rel="noopener noreferrer">Example</a></div>
+</div>
+<img class="guideline-meme" src="./diagrams/close.gif" alt="Reaction meme: a man peeks around a doorway with a knowing smile." />
+</div>
+<div class="caption">That was fast</div>
+
+<!--
+The speaker supplied the reaction meme. Pause for the joke, then explain the consequences aloud. This is humorous exaggeration, not a claim about every maintainer or how quickly they respond. Projects have different contribution rules. Explain that ignoring them can cause avoidable rework or a PR closing without a merge.
+-->
+
+---
+class: h4f
+---
+
 <div class="eyebrow">03 / Project checklist</div>
 
 # Understand how the project works
@@ -171,9 +207,9 @@ class: h4f
 <div>
 <h2><carbon:folder /> Explore the work</h2>
 <ul class="checklist">
-<li>Read the README and guidelines.</li>
+<li>Read the README and docs.</li>
 <li>Explore folders and nearby code.</li>
-<li>Review recently merged PRs.</li>
+<li>Review recently merged and open PRs.</li>
 <li>Read open <strong>and closed</strong> issues.</li>
 </ul>
 </div>
@@ -229,30 +265,30 @@ class: h4f section
 transition: slide-left
 ---
 
-<div class="eyebrow">Choose your first task</div>
+<div class="eyebrow">Choose your first contribution</div>
 <div class="section-index">1 task → 1 PR</div>
 
 # One useful problem.<br>A small, understood change.
 
-<p class="lead">Your first contribution can be a PR review,<br>a test, or a bug someone else can reproduce.</p>
+<p class="lead">Your first contribution can be a good first issue, <br> a PR review, a test, or a bug someone else can reproduce.</p>
 
 <!--
-30 seconds. Transition from finding a community to finding useful work. This is a framing principle, not a promise of a merge. Ask: what would make a task small enough to explain and verify?
+30 seconds. Before coding, find something you can work on. The next slides show alternative routes, not a checklist where everyone must do every type of contribution. First find an opportunity, check whether it still needs work, then agree on a focused next step. A useful contribution does not always require a PR.
 -->
 
 ---
 class: h4f
 ---
 
-<div class="eyebrow">05 / Find an issue</div>
+<div class="eyebrow">05 / Find work · Existing issues</div>
 
 # Labels are a starting point
 
 <div class="split wide-left">
 <div class="mock">
-<div class="mock-bar"><carbon:logo-github /> Issues · teaching example</div>
+<div class="mock-bar"><carbon:logo-github /> Issues </div>
 <div class="mock-body">
-<div class="search-line">is:issue is:open label:"good first issue"</div>
+<div class="search-line">is:issue state:open label:"good first issue"</div>
 <span class="status">○ Open</span>
 <div class="issue-title">Clarify the setup error message</div>
 <div class="tags"><span class="tag">good first issue</span><span class="tag neutral">documentation</span></div>
@@ -260,9 +296,9 @@ class: h4f
 </div>
 </div>
 <div>
-<p>Also look for:</p>
+<p class="small">Open the repository’s <strong>Issues</strong> tab and filter by label. Also look for:</p>
 <div class="tags"><span class="tag">beginner friendly</span><span class="tag">help wanted</span><span class="tag neutral">tests</span></div>
-<div class="callout" v-click><strong>Before you start</strong><br>Is anyone already working on it?<br>Is your approach welcome?</div>
+<div class="callout" v-click><strong>Next: check the status</strong><br>Does this still need work?<br>Has someone already proposed a fix?</div>
 </div>
 </div>
 <p class="caption">Labels vary. “Help wanted” does not necessarily mean easy.</p>
@@ -276,39 +312,158 @@ Source: https://docs.github.com/en/get-started/exploring-projects-on-github/find
 class: h4f
 ---
 
-<div class="eyebrow">05 / Small contributions</div>
+<div class="eyebrow">05 / Check the issue</div>
 
-# Useful work comes in many sizes
+# What is the issue’s current status?
 
-<div class="split">
-<div class="stack">
-<p><strong><carbon:document /> Documentation</strong><br><span class="small">Explain a missing step or outdated instruction.</span></p>
-<p><strong><carbon:test-tool /> Tests &amp; bug reports</strong><br><span class="small">Add coverage or reproduce a bug clearly.</span></p>
-<p><strong><carbon:accessibility /> Accessibility &amp; UI</strong><br><span class="small">Improve keyboard use or a confusing label.</span></p>
+<div class="issue-status-content">
+<div>
+<h2>Open can mean several things</h2>
+<ul class="small">
+<li><strong>A fix exists:</strong> it may need review, testing or closure. <a href="https://github.com/bitcoin-dev-project/bitcoin-dev-project/issues/358" target="_blank" rel="noopener noreferrer">Issue #358</a></li>
+<li><strong>On the roadmap:</strong> planned work may have low priority or no urgent deadline. <br><a href="https://github.com/orgs/btcpayserver/projects/16?pane=issue&itemId=152837554&issue=btcpayserver%7Cbtcpayserver%7C7145" target="_blank" rel="noopener noreferrer">Issue #7145</a></li>
+</ul>
 </div>
-<div class="stack">
-<p><strong><carbon:code /> Small fixes</strong><br><span class="small">Correct a focused bug or error message.</span></p>
-<p><strong><carbon:document /> Translation</strong><br><span class="small">Follow the project's translation process.</span></p>
-<p><strong><carbon:renew /> Outdated code</strong><br><span class="small">Discuss cleanup first</span></p>
+<!-- <div>
+<h2>Read the context before starting</h2>
+<p class="small">Check the description, comments, labels, linked PRs and project roadmap for decisions and priorities.</p>
+<p class="small">Check <strong>Development</strong> too. A timeline mention alone does not create a Development link.</p>
+<p class="small muted">An empty Development section does not prove the issue is up for grabs</p>
+</div> -->
 </div>
-</div>
-<div class="callout"><strong>Choose something you can explain and check.</strong> A major feature can wait.</div>
+<div class="callout">Confirm that the work is still needed and welcome now. If it is deferred, ask what would make it ready to work on.</div>
 
 <!--
-1 minute. Reuse the earlier deck's point that contributions extend beyond code. A bug report should include steps, expected and actual results, and environment details. Cleanup is not universally suitable for beginners: Bitcoin Core explicitly discourages refactoring PRs from new contributors. Follow each project's guidance. Core translations also use a separate workflow.
-Sources: https://bitcoincore.org/en/contribute/ and https://docs.btcpayserver.org/Contribute/ and https://github.com/bitcoin/bitcoin/blob/master/CONTRIBUTING.md
+1 minute. An open issue is not automatically a request to start coding. Some remain open after a fix, while others are deferred pending future implementation plans, a design decision or prerequisite work. A roadmap entry can record an accepted idea without making it a current priority or urgent fix. Read the latest decisions and ask whether a contribution is welcome now. For an existing fix, offer review or testing. For deferred work, ask about the blocker or choose another task. Follow every relevant reference before assuming the work is available. Speaker-supplied example: issue #358 has the timeline entry “jrakibi mentioned this — update get funding page #359” while Development is empty. This shows a cross-reference, not necessarily a formal link. Open #359 and inspect its status and changes before concluding it resolves #358. The linked example’s current resolution status has not been verified for this presentation.
+Source: https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue
 -->
 
 ---
 class: h4f
 ---
 
-<div class="eyebrow">06 / Research before coding</div>
+<div class="eyebrow">05 / Find work · Test the project</div>
 
-# Confirm the context and the approach
+# Expected behaviour comes from the docs
+
+<ol>
+<li><strong>Understand the feature.</strong> Read the README and relevant project docs.</li>
+<li><strong>Try it yourself.</strong> Follow the documented setup and workflow.</li>
+<li><strong>Compare results.</strong> What happened, and what should have happened?</li>
+<li><strong>Repeat the problem.</strong> Record the version, environment and exact steps.</li>
+<li><strong>Search GitHub issues.</strong> Add evidence to an existing report or create a new issue using the project’s template.</li>
+</ol>
+
+<!--
+1 minute. You need enough understanding of the feature to distinguish a bug from intended behaviour or a setup mistake. You do not need to understand the entire codebase. If expected behaviour is unclear, ask a focused question and link the documentation. Search both open and closed issues before filing a duplicate. Testing someone else's fix or adding a missing test is also useful work.
+Source: https://opensource.guide/how-to-contribute/
+-->
+
+---
+class: h4f bug-report
+---
+
+<div class="eyebrow">05 / Report a bug/issue</div>
+
+# A report someone else can reproduce
 
 <div class="split">
 <div>
+<h2>What to include</h2>
+<ul class="small">
+<li><strong>Context:</strong> “While doing X, Y and Z, I found…”</li>
+<li><strong>Current behaviour:</strong> describe the result. Add a screenshot or log if useful.</li>
+<li><strong>Reproduction:</strong> numbered steps, version and environment.</li>
+<li><strong>Expected behaviour:</strong> what should happen. Link the relevant docs.</li>
+</ul>
+</div>
+<div>
+<h2>Help the right person see it</h2>
+<p class="small">Follow the project’s reporting process. If a specific maintainer’s input is needed, <strong><u>@mention</u></strong> them once and explain why.</p>
+<p class="small muted">A relevant mention can notify them. Many maintainers contribute around other commitments, so give them time to respond.
+</p>
+</div>
+</div>
+<div class="callout"><a href="https://github.com/btcpayserver/btcpayserver-plugin-builder/issues/189" target="_blank" rel="noopener noreferrer">Sample issue report</a></div>
+
+<!--
+1.5 minutes. Use the issue template first. Screenshots help show a visual problem, but include exact error text and steps too. Example phrasing: “@maintainer, the contribution guide lists you for this component. Could you confirm whether this matches the intended behaviour?” Mention the relevant person when project guidance supports it or their specific input is needed, rather than tagging every maintainer. Mentions can trigger notifications, subject to settings, but do not guarantee immediate attention. Many maintainers volunteer or balance this work with other responsibilities. Keep discussion on the issue and avoid repeated pings.
+Source: https://opensource.guide/how-to-contribute/
+-->
+
+---
+class: h4f meme-slide
+---
+
+<div class="meme-stack">
+<img class="reproduction-meme" src="./diagrams/it works.jpeg" alt="Meme: It works on my computer. Yes, but we are not going to give your computer to the client." />
+<div class="callout">Clear reproduction steps help us get past “but it works on my laptop!”</div>
+</div>
+
+<!--
+Pause for the joke after the bug-report slide, then return to why reproduction steps and environment details matter. Image supplied by the speaker.
+-->
+
+---
+class: h4f
+---
+
+<div class="eyebrow">05 / Find work · Maintenance</div>
+
+# Updating outdated code
+
+<p class="lead">My merged PR replaced a dependency used for two fixed CRC calculations.</p>
+
+<dl class="pr-details">
+<dt>Opportunity</dt><dd>A dependency audit identified <code>crc_all</code> for review.</dd>
+<dt>Change</dt><dd>Replace it with CRC-5-USB and CRC-16-CCITT-FALSE implementations.</dd>
+<dt>Scope</dt><dd>Keep the public functions and their callers unchanged.</dd>
+<dt>Evidence</dt><dd>Existing test vectors plus comparisons against the old implementation.</dd>
+</dl>
+<div class="callout">For outdated or unnecessary code, agree on the need and scope first. Show how you checked the behaviour.</div>
+<p class="caption"><a href="https://github.com/256foundation/mujina/pull/103" target="_blank" rel="noopener noreferrer">256foundation/mujina · PR #103</a> · Merged 31 August 2026</p>
+
+<!--
+1.5 minutes. Open my PR to explain a concrete maintenance contribution. Its title is “chore(deps): replace crc_all with inline CRC implementations”. The dependency audit is discussion #8 and issue #29. The PR describes crc_all as a niche, single-maintainer crate whose generic abstraction was unnecessary for these two fixed configurations. Do not call it deprecated or claim the version was outdated. The public functions crc5, crc5_is_valid and crc16 and their protocol.rs call sites stayed unchanged. The PR reports nine CRC-5 vectors from esp-miner and one CRC-16 vector from a serial capture, plus local differential tests across all 256 one-byte and 65,536 two-byte inputs for both algorithms. These are the author's reported checks, not checks rerun for this presentation. GitHub confirms the PR merged on 31 August 2026. This example is about justified scope and verification, not a recommendation that beginners rewrite cryptographic or protocol code without understanding it.
+Source: https://github.com/256foundation/mujina/pull/103
+-->
+
+---
+class: h4f
+---
+
+<div class="eyebrow">05 / Find work · Other small contributions</div>
+
+# A task you can explain and check
+
+<div class="split">
+<div class="stack">
+<p><strong>Translation</strong><br><span class="small">Follow the project’s translation process and terminology.</span></p>
+<p><strong>Small fixes</strong><br><span class="small">Correct a focused bug or error message, then verify it.</span></p>
+<p><strong>Documentation</strong><br><span class="small">Fix an outdated instruction or explain a missing step.</span></p>
+</div>
+<div class="stack">
+<p><strong>PR review</strong><br><span class="small">Read a proposed change. Ask a focused question or report what you tested.</span></p>
+<p><strong>Tests</strong><br><span class="small">Add coverage for expected behaviour or reproduce a reported bug.</span></p>
+<p><strong>Accessibility &amp; UI</strong><br><span class="small">Improve keyboard use or a confusing label.</span></p>
+</div>
+</div>
+<div class="callout"><strong>Next:</strong> choose one opportunity, confirm it still needs work and discuss your approach.</div>
+
+<!--
+1 minute. These are alternative contribution routes. Follow the project's translation platform and review process, which may be separate from GitHub PRs. For review, distinguish reading the code from running it and report exactly what you checked. For small fixes, show the problem before the change and verify the result afterward. Now return to the shared workflow: research the chosen task and confirm the approach before coding.
+Sources: https://opensource.guide/how-to-contribute/ and https://bitcoincore.org/en/contribute/
+-->
+
+
+---
+class: h4f
+---
+
+<div class="eyebrow">06 / Research before you start coding</div>
+
+# Confirm the context and the approach
+
 <h2><carbon:search /> Search the repository</h2>
 <ul>
 <li>Related issues and earlier PRs</li>
@@ -316,26 +471,19 @@ class: h4f
 <li>Similar code already in the project</li>
 </ul>
 <p class="small muted">Include closed work. Search the public chat or meeting notes too.</p>
+<div class="callout">Check for duplicate work, paused proposals and decisions you may have missed.
+<br>An empty Development section does not prove the issue is up for grabs.
 </div>
-<div class="mock" v-click>
-<div class="mock-bar"><carbon:chat /> Example issue comment</div>
-<div class="mock-body">
-<p>“I'd like to work on this. I found the earlier discussion about the setup error.</p>
-<p>Is this still available? Would clarifying the message and adding a test fit the intended approach?”</p>
-</div>
-</div>
-</div>
-<div class="callout">Check for duplicate work, paused proposals and decisions you may have missed.</div>
 
 <!--
-1.5 minutes. This reflects my habit of researching before committing to work. Search exact error strings, relevant symbols and synonyms. Check whether someone has already volunteered. The comment is a fictional example, not a message to send unchanged. Do not claim to have read a discussion you haven't read. Significant or unclear work merits explicit discussion before coding.
+1 minute. This reflects my habit of researching before committing to work. Search exact error strings, relevant symbols and synonyms. Check whether someone has already volunteered. Significant or unclear work merits explicit discussion before coding. Next, show how AI can help find references to verify before asking to take on the issue.
 -->
 
 ---
 class: h4f
 ---
 
-<div class="eyebrow">06 / AI as a research assistant</div>
+<div class="eyebrow">06 / Use AI as a research assistant</div>
 
 # Ask for evidence you can verify
 
@@ -355,7 +503,7 @@ class: h4f
 </ul>
 </div>
 </div>
-<div class="callout"><strong>ChatGPT or Claude can help you research.</strong> Maintainers confirm project direction.</div>
+<div class="callout"><strong>ChatGPT or Claude in Chrome can help you research.</strong> Maintainers confirm project direction.</div>
 
 <!--
 1.5 minutes. Personal practice: ask an AI assistant for references and advice because a newcomer may miss context. AI can help with search terms, code explanations, summaries and questions, but it may lack browsing or invent references. It does not know the current task status by default. Use only public, non-sensitive material and read the actual repository policy before using AI for a contribution. This prompt is a research aid, not a product-specific feature claim.
@@ -363,28 +511,58 @@ Source for one project's policy requirements: https://github.com/bitcoin/bitcoin
 -->
 
 ---
-class: h4f section
-transition: slide-left
+class: h4f assignment-examples
 ---
 
-<div class="eyebrow">07 / Work on the issue</div>
+<div class="eyebrow">06 / Ask to work on the issue</div>
 
-# Make one focused change
+# Ask to be assigned the issue
 
-<p class="lead">Once the task and approach are appropriate:</p>
-<div class="flow" aria-label="Local contribution workflow">
-<div class="node"><carbon:branch /><strong>Fork / clone</strong>Follow the project setup.</div>
-<span class="arrow">→</span>
-<div class="node" v-click><carbon:code /><strong>Branch &amp; edit</strong>Fix the agreed problem.</div>
-<span class="arrow" v-after>→</span>
-<div class="node" v-after><carbon:test-tool /><strong>Test &amp; commit</strong>Check and record the change.</div>
-<span class="arrow" v-after>→</span>
-<div class="node" v-click><carbon:pull-request /><strong>Push &amp; propose</strong>Open a PR for review.</div>
+<div class="split">
+<div class="mock">
+<div class="mock-bar"><carbon:chat /> Example 1 · Request assignment</div>
+<div class="mock-body small">
+<p>“Hi <span v-mark><strong><u>@maintainer</u></strong></span>, I'd like to work on this issue. Is it still available?”</p>
 </div>
-<p class="caption">A pull request proposes your changes to the original project.</p>
+</div>
+<div class="mock" v-click>
+<div class="mock-bar"><carbon:chat /> Example 2 · Confirm the approach</div>
+<div class="mock-body small">
+<p>“I'd like to work on this. I found the earlier discussion about the setup error.</p>
+<p>Is this still available? Would clarifying the message and adding a test fit the intended approach?”</p>
+</div>
+</div>
+</div>
+<p class="caption"><a href="https://github.com/bitcoin-dev-project/bitcoin-dev-project/issues/340#event-27090589023" target="_blank" rel="noopener noreferrer">Example</a></p>
+<div class="callout">Follow the project’s process for taking on work. Confirm availability and scope with a maintainer.
+</div>
 
 <!--
-1 minute. Explain the diagram: a fork is your hosted copy; clone downloads files and history; a branch isolates a task; a commit records work; push uploads commits. Follow the repository workflow—some contributors can branch directly and do not need a fork. Reveal in two steps. Keep the smallest useful change and follow coding conventions. The project chooses the target branch.
+1 minute. Show the first comment immediately, highlight the maintainer mention on the first click, and reveal the second comment on the next click. These are example comments to adapt, not quotations from issue #340. Replace the placeholders with an approach and test you understand. Only mention research you actually completed. The linked issue is the speaker-supplied reference, not evidence that this exact comment was posted or that the issue is currently available. Ask for assignment where the project uses it, and follow the maintainer's guidance. Next, check the project’s branch workflow before making changes.
+-->
+
+---
+class: h4f
+---
+
+<div class="eyebrow">07 / <carbon:warning-alt /> Before you change code</div>
+
+# Your change needs its own branch
+
+<p class="lead">Check the contribution guide for the correct base branch.</p>
+
+<div class="branch-flow" aria-label="Start from the required base branch, create a feature branch, then open a pull request back to the required base">
+<div><carbon:branch /><h2>Project’s base</h2><p><code>main</code>, <code>develop</code><br>or <code>staging</code></p></div>
+<span class="branch-arrow" v-click="1" aria-label="Create a branch">→</span>
+<div class="feature-branch" v-click="1"><carbon:code /><h2>Your feature branch</h2><p><code>fix/setup-error</code><br>Edit, commit and test here.</p></div>
+<span class="branch-arrow" v-click="2" aria-label="Open a pull request">→</span>
+<div v-click="2"><carbon:pull-request /><h2>PR to the base</h2><p>Review and required checks<br>before merging.</p></div>
+</div>
+<div class="callout branch-warning"><carbon:warning-alt /><div><strong>Do not make your contribution directly on main or staging.</strong><br>Create a separate branch for your change. Check the PR’s target branch.</div></div>
+
+<!--
+1 minute. Show the project base immediately, reveal the feature branch and its arrow on click 1, and reveal the PR and its arrow on click 2. Remind contributors to check the commit policy. Squashing combines commits into one, but is not a universal requirement: projects may preserve separate logical commits or use squash-and-merge. Follow the project’s timing for history cleanup, particularly during review. The branch names and fix/setup-error are illustrative. Do not claim most projects use staging. Read the contribution guide to determine both the starting branch and the PR target. Create a separate feature or fix branch from the required base, commit there and propose the change through the project's review process. Where a project uses an integration branch, its process determines when changes reach main. Approval and required checks depend on the repository. The diagram shows a contributor's route, not a universal release pipeline. Next, verify the change locally before preparing the PR. Explain issue links when introducing the PR description.
+Sources: https://docs.github.com/en/get-started/using-github/github-flow and https://docs.github.com/en/pull-requests/reference/pull-request-merges
 -->
 
 ---
@@ -393,7 +571,7 @@ class: h4f
 
 <div class="eyebrow">07 / Check your work locally</div>
 
-# Verify the change before sharing it
+# Verify the change before opening your PR
 
 <div class="split">
 <div>
@@ -408,7 +586,7 @@ class: h4f
 <div class="card orange">
 <carbon:test-tool class="icon" />
 <h2>What proves it works?</h2>
-<p>For a bug fix, show the failing behavior and verify the correction.</p>
+<p>For a bug fix, show the failing behaviour and verify the correction.</p>
 <p class="small">For docs or UI, walk through the instructions or interaction yourself.</p>
 </div>
 </div>
@@ -428,7 +606,7 @@ class: h4f pr-example
 
 <div class="split wide-left">
 <div class="mock">
-<div class="mock-bar"><carbon:pull-request /> Pull request · teaching example</div>
+<div class="mock-bar"><carbon:pull-request /> Pull request </div>
 <div class="mock-body">
 <div class="issue-title">Clarify the missing-config error</div>
 <dl class="pr-details">
@@ -450,6 +628,36 @@ class: h4f pr-example
 
 <!--
 1.5 minutes. Reuse the previous deck's problem, change, verification and context structure. This is a schematic PR description, not a completed upstream PR or evidence of real test results. Replace prompts with what you actually did. A clear title names the affected behavior; use any required project title prefix.
+-->
+
+---
+class: h4f
+---
+
+<div class="eyebrow">08 / Connect the fix</div>
+
+# Linking a PR to its issue
+
+<div class="split">
+<div>
+<h2>In the PR description</h2>
+<p><code>Closes #358</code><br>or <code>Fixes #358</code></p>
+<p class="small">Closing keywords create the link when the PR targets the repository’s default branch.</p>
+</div>
+<div>
+<h2>Through Development</h2>
+<p>Someone with write access can select the PR in the issue’s <strong>Development</strong> section.</p>
+<p class="small">A plain mention such as <code>#358</code> adds context without declaring that the PR resolves it.</p>
+</div>
+</div>
+<div class="callout">Use a closing link when the PR resolves the issue. Merging into the default branch then closes the linked issue automatically.
+<br>
+<p class="small squash-reminder"><strong>Before your PR: check the commit policy.</strong> Squash into one commit if required.<br>Some projects keep separate commits or let maintainers squash at merge.</p>
+</div>
+
+<!--
+1 minute. These are two ways to establish the issue–PR link. Put the closing keyword in the PR description, not just a discussion comment. For another repository, use the full reference, for example Fixes owner/repository#358. Keywords targeting a non-default branch do not create the link. A closing keyword in a commit message can close the issue without listing the containing PR as a linked PR. Manual linking through the issue's Development section requires write access. Use a normal reference for partial or related work that should not close the issue.
+Source: https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue
 -->
 
 ---
@@ -551,7 +759,7 @@ class: h4f
 transition: slide-left
 ---
 
-<div class="eyebrow">Audience activity / 5 minutes</div>
+<div class="eyebrow">Audience activity / 10 minutes</div>
 
 # Find your first opportunity
 
@@ -570,10 +778,10 @@ transition: slide-left
 <p class="caption">Pair up if helpful. Share your project,<br>opportunity and question afterward.</p>
 </div>
 </div>
-<div class="callout small"><strong>No connection?</strong> Use the example issue from slide 9 and draft your question.</div>
+<div class="callout small"><strong>No connection?</strong> Use the example issue from slide 10 and draft your question.</div>
 
 <!--
-5 minutes. The timer starts only when clicked and can be paused or reset. Participants need only browse and take notes, not post a comment or claim a task. Suggested pacing: one minute for discovery, one for the guide, two for the issue and one for the question. If no beginner labels exist, identify a documentation gap or testing opportunity. With no connection, revisit the mock issue and ask what context is missing. Share back briefly during the summary.
+10 minutes. The timer starts only when clicked and can be paused or reset. Participants need only browse and take notes, not post a comment or claim a task. Suggested pacing: two minutes for discovery, two for the guide, four for the issue and two for the question. If no beginner labels exist, identify a documentation gap or testing opportunity. With no connection, revisit the mock issue and ask what context is missing. Share back briefly during the summary.
 Source: https://bitcoindevs.xyz/contribute
 -->
 
